@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ef">
+  <meta name="description" content="L&A Moda e Acessórios — peças escolhidas para acompanhar seu estilo.">
+  <title>L&A Moda e Acessórios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">Frete grátis em compras acima de R$ 299 · Novidades para você ✨</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="L&A Moda e Acessórios — início"><span class="brand-mark">L<span>&</span>A</span><span class="brand-name">MODA E ACESSÓRIOS</span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#colecao">Coleção</a><a href="#sobre">Nossa essência</a></nav>
+    <button class="cart-button" id="open-cart" type="button" aria-label="Abrir sacola">Sacola <span class="cart-count" id="cart-count">0</span></button>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy"><span class="eyebrow">SEU ESTILO, DO SEU JEITO</span><h1>Vista o que faz<br><em>você brilhar.</em></h1><p>Moda e acessórios escolhidos com carinho para celebrar quem você é, em todos os momentos.</p><a class="button button-dark" href="#colecao">Descobrir coleção <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-art" role="img" aria-label="Inspiração de moda em tons naturais"><div class="hero-sun"></div><div class="hero-caption">ESSENCIALMENTE<br><strong>VOCÊ</strong></div><div class="hero-sticker">L&A<br><small>desde sempre</small></div></div>
+      <div class="hero-side-note">FEITO PARA VOCÊ · L&A</div>
+    </section>
+    <section class="benefits" aria-label="Benefícios"><div><span>✦</span><p><strong>Escolhas especiais</strong><br>Peças que contam histórias</p></div><div><span>♡</span><p><strong>Compra segura</strong><br>Do seu jeito e no seu tempo</p></div><div><span>↗</span><p><strong>Entrega para todo o Brasil</strong><br>Consulte seu CEP no carrinho</p></div></section>
+    <section class="collection section-wrap" id="colecao"><div class="section-heading"><div><span class="eyebrow">A CURADORIA L&A</span><h2>Favoritos da estação</h2></div><p>Peças versáteis para deixar cada dia mais especial.</p></div><div class="product-grid" id="product-grid" aria-live="polite"></div></section>
+    <section class="story" id="sobre"><div class="story-image"><span>ESTILO COM<br><strong>AFETO</strong></span></div><div class="story-copy"><span class="eyebrow">UM POUQUINHO SOBRE NÓS</span><h2>Detalhes que fazem<br>toda a diferença.</h2><p>A L&A Moda e Acessórios nasceu para aproximar você de peças bonitas, confortáveis e cheias de personalidade. Uma curadoria feita com carinho, para você se sentir bem em cada detalhe.</p><a href="#colecao" class="text-link">Conheça nossa coleção <span>→</span></a></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">L<span>&</span>A</span><span class="brand-name">MODA E ACESSÓRIOS</span></a><p>Seu estilo merece esse carinho.</p><small>© <span id="year"></span> L&A Moda e Acessórios</small></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true"><div class="drawer-header"><div><span class="eyebrow">ESCOLHAS COM CARINHO</span><h2 id="cart-title">Sua sacola</h2></div><button class="icon-button" id="close-cart" aria-label="Fechar sacola">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><span>♡</span><p>Sua sacola está esperando<br>por algo especial.</p><button class="text-link" id="continue-shopping">Explorar coleção →</button></div><div class="cart-footer" id="cart-footer" hidden><div class="zip-box"><label for="cart-zip">Calcule o frete pelo CEP</label><div class="zip-row"><input id="cart-zip" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9"><button id="calculate-shipping" class="button button-outline" type="button">Calcular</button></div><p class="zip-feedback" id="cart-zip-feedback" aria-live="polite"></p></div><div class="totals"><div><span>Subtotal</span><span id="cart-subtotal">R$ 0,00</span></div><div><span>Frete estimado</span><span id="cart-shipping">Calcule pelo CEP</span></div><div class="total-line"><strong>Total</strong><strong id="cart-total">R$ 0,00</strong></div></div><button class="button button-dark checkout-button" id="checkout-button" type="button">Confirmar pedido <span>→</span></button><p class="demo-note">Frete e pagamento são demonstrativos neste protótipo.</p></div></aside>
+
+  <section class="checkout-screen" id="checkout-screen" aria-labelledby="checkout-title" hidden>
+    <div class="checkout-top"><button class="back-link" id="back-to-shop">← Voltar à loja</button><a class="brand" href="#inicio"><span class="brand-mark">L<span>&</span>A</span><span class="brand-name">MODA E ACESSÓRIOS</span></a><span class="checkout-secure">♡ Compra protegida</span></div>
+    <div class="checkout-layout"><div class="checkout-main"><span class="eyebrow">SÓ MAIS UM PASSO</span><h1 id="checkout-title">Finalizar pedido</h1><p class="checkout-intro">Confira seus dados de entrega e escolha como deseja pagar.</p>
+      <section class="checkout-card"><div class="step-heading"><span class="step-number">1</span><div><h2>Entrega</h2><p>Informe seu CEP para consultar o endereço e estimar o frete.</p></div></div><div class="form-row"><label for="checkout-zip">CEP</label><div class="zip-row"><input id="checkout-zip" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9"><button class="button button-outline" id="checkout-lookup" type="button">Confirmar CEP</button></div><p class="zip-feedback" id="checkout-zip-feedback" aria-live="polite"></p></div><div class="address-result" id="address-result" hidden></div></section>
+      <section class="checkout-card"><div class="step-heading"><span class="step-number">2</span><div><h2>Forma de pagamento</h2><p>Escolha uma opção para continuar.</p></div></div><div class="payment-options"><label class="payment-option"><input type="radio" name="payment" value="pix" checked><span class="payment-icon">◇</span><span><strong>Pix</strong><small>Pagamento à vista</small></span><span class="radio-dot"></span></label><label class="payment-option"><input type="radio" name="payment" value="credit"><span class="payment-icon">▤</span><span><strong>Cartão de crédito</strong><small>Parcele em até 12 vezes</small></span><span class="radio-dot"></span></label><label class="payment-option"><input type="radio" name="payment" value="debit"><span class="payment-icon">▣</span><span><strong>Cartão de débito</strong><small>Pagamento à vista</small></span><span class="radio-dot"></span></label></div><div class="installments-wrap" id="installments-wrap" hidden><label for="installments">Número de parcelas</label><select id="installments"></select><p class="installment-summary" id="installment-summary"></p></div><div class="payment-info" id="payment-info" aria-live="polite"></div></section>
+      <button class="button button-dark place-order" id="place-order" type="button">Confirmar pedido <span>→</span></button><p class="demo-note checkout-demo-note">Protótipo demonstrativo: não insira dados reais de cartão. Nenhum pagamento será cobrado.</p>
+    </div><aside class="order-summary"><h2>Resumo do pedido</h2><div id="checkout-items"></div><div class="totals"><div><span>Subtotal</span><span id="checkout-subtotal">R$ 0,00</span></div><div><span>Frete estimado</span><span id="checkout-shipping">A confirmar</span></div><div class="total-line"><strong>Total</strong><strong id="checkout-total">R$ 0,00</strong></div></div><p class="summary-help">O valor do frete é uma estimativa demonstrativa, calculada conforme a região do CEP.</p></aside></div>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="order-dialog" id="order-dialog"><button class="icon-button dialog-close" id="close-order" aria-label="Fechar">×</button><span class="success-icon">✓</span><span class="eyebrow">OBRIGADA POR ESCOLHER A L&A</span><h2>Pedido confirmado!</h2><p id="order-message"></p><p class="demo-note">Esta é uma confirmação demonstrativa. Nenhuma transação ou cobrança foi realizada.</p><button class="button button-dark" id="finish-order">Voltar à loja</button></dialog>
+</body>
+</html>
